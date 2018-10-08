@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            //['class' => 'yii\grid\SerialColumn'],
 
             'cms_page_id',
             'title',
@@ -30,7 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_by',
             'updated_on',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+			'template' => '{update}',],
         ],
     ]); ?>
 </div>
